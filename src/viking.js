@@ -47,7 +47,7 @@ class Saxon extends Soldier{
 // War
 class War {
     constructor(){
-        this.vikingArmy = [] //why is it working if "vikingArmy" is not declared
+        this.vikingArmy = [] // the array doesn't have to be declared before
         this.saxonArmy = []
     }
 
@@ -60,6 +60,8 @@ class War {
     }
 
     vikingAttack(){
+        return this.generalAttack("vikingAttack")
+    }/* {
         const randomSaxonIndex = Math.floor(Math.random()*this.saxonArmy.length)
         const randomVikingIndex = Math.floor(Math.random()*this.vikingArmy.length)
         const randomSaxon = this.saxonArmy[randomSaxonIndex]
@@ -70,9 +72,12 @@ class War {
         }
         return result
 
-    }
+    } */
 
-    saxonAttack(){
+    saxonAttack() {
+        return this.generalAttack("saxonAttack")
+        
+    }/* {
         const randomSaxonIndex = Math.floor(Math.random()*this.saxonArmy.length)
         const randomVikingIndex = Math.floor(Math.random()*this.vikingArmy.length)
         const randomSaxon = this.saxonArmy[randomSaxonIndex]
@@ -84,9 +89,9 @@ class War {
             this.vikingArmy.splice(randomVikingIndex, 1)
         }
         return result
-    }
+    } */
 
-    generalAttack(whoAttacks){ // Verify this one 
+    generalAttack(whoAttacks){
         const randomSaxonIndex = Math.floor(Math.random()*this.saxonArmy.length)
         const randomVikingIndex = Math.floor(Math.random()*this.vikingArmy.length)
         const randomSaxon = this.saxonArmy[randomSaxonIndex]
